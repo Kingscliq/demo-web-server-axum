@@ -51,3 +51,20 @@ Error handling
 HTTP Status Code
 JSON Responses
 Vectors and Hashmaps
+
+- Docker
+
+docker run -d \
+ --name postgres-db \
+ -e POSTGRES_USER=postgres \
+ -e POSTGRES_PASSWORD=password \
+ -e POSTGRES_DB=axum_server \
+ -p 5432:5432 \
+ -v postgres-data:/var/lib/postgresql/data \
+ postgres:15
+
+# Connection string
+
+# postgres://postgres:password@localhost:5432/axum_server
+
+mysql://user:password@host:port/db_name
